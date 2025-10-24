@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Maior(vetor){
+            var M = vetor[0]
+            for(var i = 1; i < vetor.length; i++){
+                if(M < vetor[i]){
+                    M = vetor[i]
+                }
+            }
+            return M
+        }
+        var numeros = [500, -100, 700,0,1,2]
+        document.write(Maior (numeros))
+    </script>
+</body>
+</html>

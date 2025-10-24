@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function escreveVetor(vetor){
+             for(var i=0; i < vetor.length; i++){
+            document.write(vetor[i])
+            document.write("<br>")
+             }
+        }
+        var Y=[10,20,30,40,50]      
+        escreveVetor(Y)     
+        document.write("<hr>")
+        Y.push(60) /*adicionar o 60 no vetor*/ 
+        escreveVetor(Y)
+    </script>    
+</body>
+</html>
