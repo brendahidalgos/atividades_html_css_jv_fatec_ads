@@ -22,7 +22,6 @@ div{
     border: 1px solid #000000;
     border-radius: 10px;
     box-shadow: 5px 2px 10px black;
-
 }
 div:hover{
     rotate: 10deg;

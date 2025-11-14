@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnAP">Adicionar Parágrafo</button>
+    <button id="btnLimpa">Limpar Div</button>
+    <button id="btnListar">Listar agenda</button><br/>
+    <form id="formInserir">
+        Nome: <input id="inome" type="text" required maxlength="100" />
+        Fone: <input id="ifone" type="text" required maxlength="20" />
+        <input type="submit" value="Inserir" />
+    </form>
+    <div id="div1"></div>
+</body>
+</html>
+ 
+<script>
+    // Aqui é Javascript
+    var vetor = []
+ 
+    class ItemAgenda{
+        constructor(n,f)
+        {
+            this.nome = n
+            this.fone = f
+        }
+    }
+ 
+    formInserir.onsubmit = function(event) {
+        event.preventDefault() // cancela submit, impedindo envio pela internet
+        // obter os dados do formulario
+        var n = inome.value; var f = ifone.value
+        var item = new ItemAgenda(n,f) // cria objeto
+        vetor.push( item )             // inseri no final do vetor
+        inome.value=""; ifone.value=""
+    }
+ 
+    btnListar.onclick = function(){
+        limpeza()
+        for(var i=0; i < vetor.length; i++)
+        {
+            var objeto = vetor[i]
+            var novoP = document.createElement("P")
+            novoP.textContent = `Nome: ${objeto.nome} - Fone: ${objeto.fone}`
+            div1.appendChild(novoP)
+        }
+    }
+ 
+    btnAP.onclick = function() {
+        var novoP = document.createElement("p")
+        novoP.textContent = "FATEC"
+        novoP.style.color = "green"
+        novoP.style.backgroundColor = "yellow"
+        div1.appendChild(novoP)
+    }
+ 
+    document.body.onclick = function(event) {
+        // Em qual elemento o usuário clicou?
+        var elementoOndeClicou = event.target
+        if(elementoOndeClicou.nodeName=="P")
+        {
+            elementoOndeClicou.style.backgroundColor = "red"
+        }
+    }
+ 
+    document.body.ondblclick = function(){
+        // Em qual elemento o usuário clicou?
+        var elementoOndeClicou = event.target
+        if(elementoOndeClicou.nodeName=="P")
+        {
+            var noPai = elementoOndeClicou.parentNode // descobre o pai
+            noPai.removeChild(elementoOndeClicou)  // remove o filho
+        }
+    }
+ 
+    btnLimpa.onclick = limpeza
+ 
+    function limpeza(){
+        while( div1.hasChildNodes() )
+        {
+            var primeiroFilho = div1.firstChild
+            div1.removeChild( primeiroFilho )
+        }
+    }
+</script>

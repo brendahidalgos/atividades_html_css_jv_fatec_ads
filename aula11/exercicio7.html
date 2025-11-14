@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pc{
+            constructor(n,m,p){
+                this.ndeserie= n
+                this.marca = m
+                this.processador = p                
+            }           
+        }
+        //teste
+        var pc1 = new Pc("123456", "Lenovo", "Intel Core i5")  
+        document.write(
+            `O computador com o número de série ${pc1.ndeserie} é da marca ${pc1.marca} <br/>`
+        )      
+    </script>
+</body>
+</html>

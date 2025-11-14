@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formInserir">
+        Nome: <input type="text" name="nodeName" id="idNome" required maxlength="100"/>
+        Fone: <input type="text" name="nodeFone" id="idFone" required maxlength="20"/>
+        <input type="submit" value="Inserir"/>
+    </form>
+
+</body>
+</html>
+<script>
+    var vetor = []
+
+    class ItemAgenda{
+        construtor(n,f)
+        {
+            this.nome = n
+            this.fone = f
+        }
+    }
+
+    var x = new ItemAgenda("João","123456789")
+    formInserir.onsubmit = function(event){
+    event.preventDefault() //cancela submit, impedindo envio pela internet
+    alert("Funcionou")
+    }
+    btnAP.onclick = function(){
+    varnovoP = document.createElement("P")
+    novoP.textContent = "FATEC"
+    novoP.style.color = "red"
+}
+</script>

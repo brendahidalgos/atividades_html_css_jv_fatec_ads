@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnAP">Adicionar Parágrafo</button>
+    <button id="btnLimpa">Limpar Div</button>
+
+    <form id="formInserir">
+        Nome: <input type="text" name="nodeName" id="idNome" required maxlength="100"/>
+        Fone: <input type="text" name="nodeFone" id="idFone" required maxlength="20"/>
+        <input type="submit" value="Inserir"/>
+    </form>
+
+    <div id="div1"></div>
+</body>
+</html>
+
+<script>
+// Aqui é JavaScript
+//DOM Document Object Mode - Estrutura hierárquica
+btnAP.onclick = function(){
+    var novoP = document.createElement("p")
+    novoP.textContent = "FATEC"
+    novoP.style.color = "green"
+    novoP.style.backgroundColor = "yellow"
+    div1.appendChild(novoP)
+}
+
+document.body.onclick = function(event){
+    //em qual elemento o usuario clicou?
+    var elemento = event.target 
+    if(elemento.nodeName=="P"){
+         elemento.style.backgroundColor = "red"
+    }   
+}
+document.body.ondblclick = function(event){
+    //em qual elemento o usuario clicou?
+    var elemento = event.target 
+    if(elemento.nodeName=="P"){
+        var noPai = elemento.parentNode
+        noPai.removeChild(elemento)
+    }   
+}
+btnLimpa.onclick = function(){
+    while (div1.hasChildNodes()){
+        var primeiroFilho = div.firstChild
+        div1.removeChild(PrimeiroFilho)
+    }
+}
+
+formInserir.onsubmit = function(event){
+    event.preventDefault() //cancela submit, impedindo envio pela internet
+    alert("Funcionou")
+}
+btnAP.onclick = function(){
+    varnovoP = document.createElement("P")
+    novoP.textContent = "FATEC"
+    novoP.style
+}
+</script>

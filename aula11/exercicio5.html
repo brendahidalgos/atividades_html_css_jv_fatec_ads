@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON; JavaScript Object Notation
+        var aluno1, aluno2
+        aluno1 = {nome: "Brenda", telefone: "(13)999999999", endereco: "Rua X", dataNasc:"1999-04-03",
+                    idade: function(){
+                        var dn = new Date (this.dataNasc)
+                        var hoje = new Date()
+                        var r = (hoje - dn) /1000/60/60/24/365
+                        return r
+                    }
+        }
+        aluno2 = {nome: "Maria", telefone: "(13)888888888", endereco: "Rua y", dataNasc:"2003-02-25"}
+
+        document.write(aluno1.idade())
+    </script>
+</body>
+</html>

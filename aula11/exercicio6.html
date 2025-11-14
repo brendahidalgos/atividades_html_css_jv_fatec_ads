@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Aluno{
+            constructor(n,t,e,dn){
+                this.nome= n
+                this.telefone = t
+                this.endereco = e
+                this.dataNasc = dn
+            }
+            idade(){
+                var dn = new Date (this.dataNasc)
+                var hoje = new Date()
+                var r = (hoje - dn) /1000/60/60/24/365 //casas decimais
+                return Math.trunc(r,0) //retirando os decimais
+            }
+        }
+        //teste
+        var aluno1 = new Aluno("Maria", "(13)99999999", "Rua X", "2001-11-25")  
+        document.write(
+            `A idade de ${aluno1.nome} é ${aluno1.idade()} <br/>`
+        )      
+    </script>
+</body>
+</html>
