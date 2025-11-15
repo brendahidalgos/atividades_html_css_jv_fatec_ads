@@ -38,7 +38,7 @@ Como são projetos baseados em Front-End (HTML, CSS e JS), você pode visualizá
 ---
 ## 👩‍💻 Desenvolvido em
 
-* **Curso Técnico em Desenvolvimento de Sistemas**
+* **Faculdade de Análise e Desenvolvimento de Sistemas**
 
 ## 📧 Contato
 
@@ -48,4 +48,4 @@ Se tiver alguma dúvida ou sugestão, pode me chamar!
 
 ## ✍️ Autor
 
-* **@brendahidalgos** - Aluna do curso de Análise e Desenvolvimento de Sistemas.
+* **@brendahidalgos** - Aluna da faculdade de Análise e Desenvolvimento de Sistemas.
